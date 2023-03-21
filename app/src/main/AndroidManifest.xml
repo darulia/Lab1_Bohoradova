@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Affirmations">
         <activity
+            android:name=".Secondctivity"
+            android:exported="false" />
+        <activity
             android:name=".data.SecondActivity"
             android:exported="false" />
         <activity

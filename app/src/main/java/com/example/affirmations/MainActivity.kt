@@ -20,6 +20,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import androidx.recyclerview.widget.RecyclerView
 import com.example.affirmations.adapter.CatAdapter
 import com.example.affirmations.data.Cat
@@ -42,4 +43,52 @@ class MainActivity : AppCompatActivity() {
         recyclerView.setHasFixedSize(true)
     }
 }
+
+
+
+
+
+
+
+
+
+
+/*class MainActivity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        // Отримуємо доступ до кнопки
+        val button = findViewById<Button>(R.id.button)
+
+        // Встановлюємо слухача натискань на кнопку
+        button.setOnClickListener {
+            // Створюємо екземпляр дата-класу зі значенням "12345"
+            val myData = MyDataClass("12345")
+
+            // Створюємо інтент для переходу на SecondActivity
+            val intent = Intent(this, SecondActivity::class.java)
+
+            // Додаємо наші дані до інтента
+            intent.putExtra("myData", myData)
+
+            // Запускаємо SecondActivity
+            startActivity(intent)
+        }
+    }
+}
+
+private fun Intent.putExtra(s: String, myData: MyDataClass) {
+
+}
+
+class SecondActivity {
+
+}
+
+class MyDataClass(s: String) {
+
+}
+*/
 
