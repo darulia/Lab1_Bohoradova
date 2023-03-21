@@ -23,7 +23,6 @@ import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import com.example.affirmations.adapter.CatAdapter
 import com.example.affirmations.data.Cat
-import com.example.affirmations.model.Affirmation
 
 
 class MainActivity : AppCompatActivity() {
@@ -33,7 +32,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         // Initialize data.
-        val myDataset = Cat().loadAffirmations()
+        val myDataset = Cat("John", 30).loadAffirmations()
 
         val recyclerView = findViewById<RecyclerView>(R.id.recycler_view)
         recyclerView.adapter = CatAdapter(this, myDataset)
@@ -41,10 +40,6 @@ class MainActivity : AppCompatActivity() {
         // Use this setting to improve performance if you know that changes
         // in content do not change the layout size of the RecyclerView
         recyclerView.setHasFixedSize(true)
-
-        fun onClickGoOne(view: View) {
-            val intent = Intent(this, Affirmation::class.java)
-            startActivity(intent)
-        }
     }
 }
+

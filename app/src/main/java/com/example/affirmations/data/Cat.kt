@@ -22,7 +22,7 @@ import com.example.affirmations.model.Affirmation
 /**
  * [Datasource] generates a list of [Affirmation]
  */
-class Cat() {
+class Cat(s: String, i: Int) {
 
     fun loadAffirmations(): List<Affirmation> {
         return listOf<Affirmation>(
